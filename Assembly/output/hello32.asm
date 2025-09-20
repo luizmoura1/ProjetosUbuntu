@@ -3,7 +3,7 @@
 ; ./exe
 ; [label]	opcode	[operand,]		[;comment]
  
-		segment	.data
+		segment	.data			; é correto?
 LF		equ	0x0a
 ;eax
 SYS_EXIT    	equ	0x01          		;código da syscall sys_exit
@@ -12,12 +12,12 @@ SYS_CALL	equ	0x80
 ;ebx
 STDOUT		equ	0x01			;descritor de arquivo (fd)
 
-		section	.data
+		section	.data			; data segment
 msg		db	"Oi, mundo!", LF	;string e quebra de linha
 tmn		equ 	$ - msg         	;tamanho da string  
  
-		section	.text
-		global  _start				;ponto de entrada                   
+		section	.text			; code segment
+		global  _start			;ponto de entrada                   
 
 _start: 
     		mov 	eax, SYS_WRITE		;função escrever 

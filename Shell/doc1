@@ -1,0 +1,14 @@
+echo '2) Aspas simples no bloco awk dispensam escapes, mas impedem o uso de variáveis do shell.'
+echo '3) Quando os operandos vêm de variáveis do shell, é necessário usar aspas duplas'
+echo '   ao redor da string passada via <<< ou echo, para garantir a expansão.'
+echo '   Exemplo: awk ... <<< "$a $b"       (correto)'
+echo '            awk ... <<< '\''$a $b'\''  (expande literalmente $a e $b)'
+
+
+
+
+echo
+echo -n "awk 'BEGIN {var1=\$a; var2=\$b; print var1 + var2}' = "; awk 'BEGIN {var1=$a; var2=$b; print var1 + var2}'
+echo -n "awk \"BEGIN {var1=\$a; var2=\$b; print var1 + var2}\" = "; awk "BEGIN {var1=$a; var2=$b; print var1 + var2}"
+
+

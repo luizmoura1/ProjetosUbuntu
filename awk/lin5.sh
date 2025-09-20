@@ -1,0 +1,1 @@
+awk '{ print length($0), $0 }' carros

@@ -1,0 +1,28 @@
+Considerando
+- string: expr operando1 operador operando2 = 
+- comando: expr operando1 operador operando2
+- formato: %d
+- formatos: %s%d
+- escape: \n
+veja a seguir 18 formas de mostrar a expressão 'expr operando1 operador operando2 = resultado':
+
+1. echo -n 'string' ; comando
+2. echo -n "string" ; comando
+3. echo 'string $(comando)'                                     (sem expansão!)
+4. echo "string $(comando)"
+5. echo 'string'   comando
+6. echo "string"   comando
+7. printf 'string' ;  comando
+8. printf "string" ;  comando
+9. printf 'formato string' ;  comando
+10. printf "formato string" ;  comando
+11. printf 'formato' 'string' ;  comando
+12. printf "formato" "string" ;  comando
+13. printf 'string $(comando) escape'                           (sem expansão!)
+14. printf "string $(comando) escape"
+15. printf 'string formato escape'   $(comando)
+16. printf "string formato escape"   $(comando)
+17. printf 'formatos escape' 'string'   $(comando)
+18. printf "formatos escape" "string"   $(comando)
+
+Dentro de aspas simples, o operador $ não funciona, ou seja, não ocorre a expansão de variáveis ou comandos. Por isso, nos itens 3 e 13 da lista, onde usamos $(comando) dentro de aspas simples, o comando não é expandido, e o texto $(comando) será tratado literalmente, sem executar a substituição esperada.

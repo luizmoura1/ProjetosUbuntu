@@ -1,0 +1,5 @@
+100	Luiz	M	4	false
+200	Solange	F	10	true
+300	Fulana	F	3	false
+400	Sicrano	M	4	false
+500	Beltrana	F	7	true

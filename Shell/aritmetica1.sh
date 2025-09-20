@@ -17,8 +17,8 @@ echo -n "expr \$a \* \$b = "; expr $a \* $b
 echo -n "expr \$a / \$b = "; expr $a / $b
 echo -n "expr \$a % \$b = "; expr $a % $b
 echo '-----------------------------------------------------------'
-echo 'Observações:'
-echo 'expr suporta multiplicação apenas se for usado escape (\*).'
-echo 'expr, assim como $(()), não dá suporte a números reais ou de ponto flutuante.'
-echo 'expr não suporta outras operações aritméticas mais complexas (ex.: potenciação).'
+#echo 'Observações:'
+#echo 'expr suporta multiplicação apenas se for usado escape (\*).'
+#echo 'expr, assim como $(()), não dá suporte a números reais ou de ponto flutuante.'
+#echo 'expr não suporta outras operações aritméticas mais complexas (ex.: potenciação).'
 

@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+echo 'O P E R A Ç Õ E S  L Ó G I C A S'
+echo '-----------------------------------------------------------'
+echo 'Operandos variáveis definidos em design-time com valor nulo.'
+a=2; b=3; echo 'a=2'; echo 'b=3'
+echo "&&	test	expressão composta:"
+echo -ne ""; test a == b  &&  a != b; echo $?	#
+echo "&& com [] e expressão composta:"
+echo -ne ""; [ a == b  &&  a != b ]; echo $?	#
+echo
+echo "&&	test	expressões simples:"
+echo -ne ""; test a == b  &&  test a != b; echo $?	#
+echo "&&	[]	expressões simples:"
+echo -ne ""; [ a == b ]  &&  [ a != b ]; echo $?	#
+echo
+echo "-a	test	expressão composta:"
+echo -ne ""; test a == b  -a  a != b; echo $?	#
+echo "-a	[]	expressão composta:"
+echo -ne ""; [ a == b  -a  a != b ]; echo $?	#
+echo
+ 
