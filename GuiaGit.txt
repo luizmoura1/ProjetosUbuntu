@@ -1,0 +1,87 @@
+=====================================================
+          GUIA DE SINCRONIZAÇÃO GIT
+          (Bebês, vovós e gente esquecida)
+=====================================================
+
+Objetivo: Manter os repositórios locais e remotos
+dos 4 SO’s (Windows, Ubuntu, Debian, Lubuntu)
+sempre sincronizados e organizados.
+
+-----------------------------------------------------
+1️⃣ PREPARAÇÃO INICIAL (uma vez por repositório)
+
+# Criar pasta local se não existir
+mkdir ~/Documentos/ProjetosDebian   # exemplo Debian
+
+cd ~/Documentos/ProjetosDebian
+
+# Inicializar repositório local (se ainda não)
+git init
+
+# Adicionar repositório remoto
+git remote add origin https://github.com/luizmoura1/ProjetosDebian.git
+
+# Buscar dados do remoto
+git fetch origin
+
+# Configurar branch local para rastrear remoto
+git checkout -t origin/main
+
+# Se branch já existir:
+git branch -u origin/main main
+
+-----------------------------------------------------
+2️⃣ ATUALIZAÇÕES FUTURAS / DIÁRIAS
+
+cd ~/Documentos/<NomeDoRepositório>   # Ex: ProjetosUbuntu
+
+# Atualizar informações do remoto
+git fetch origin
+
+# Conferir status
+git status
+git branch -vv
+
+# Trazer alterações do remoto (mantendo histórico limpo)
+git pull --rebase origin main
+
+# Após editar ou criar arquivos
+git add .
+git commit -m "Mensagem do commit"
+
+# Enviar alterações para o remoto
+git push origin main
+
+-----------------------------------------------------
+3️⃣ LIMPANDO ARQUIVOS LOCAIS INDESEJADOS
+
+git restore .    # descarta alterações locais
+git clean -f     # remove arquivos não rastreados
+
+# Conferir status após limpeza
+git status
+
+-----------------------------------------------------
+4️⃣ SINCRONIZAÇÃO ENTRE SO’S
+
+Para cada SO (Windows, Ubuntu, Debian, Lubuntu):
+
+1. Abrir terminal/VSCode no diretório do repositório
+2. Executar passo 2 (atualizações)
+3. Confirmar sempre:
+   git status
+   git branch -vv
+
+-----------------------------------------------------
+5️⃣ VERIFICAÇÃO FINAL
+
+git fetch origin
+git status
+git branch -vv
+
+# Deve mostrar:
+# - Branch local up to date com origin/main
+# - Working tree limpo
+# - Branch local rastreando remoto
+
+=====================================================
