@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+    <!--
+    function my_fun(){
+        if (document.num_form.num1.value.length == 5) {
+            window.alert("Obrigado por digitar somente 5 caracteres.");
+            return true;
+        } else {
+            window.alert("Digite 5 caracteres, por favor.");
+            return false;
+        }
+
+    }
+    //-->
+</script>
+</head>
+<body>
+<h3>Cap 4 - Evento OnSubmit</h3>
+<hr>
+<a href="javascript:active()">Standard Link</a>
+<br><br>
+<form name="num_form" method="POST" enctype="application/x-www-form-urlencoded" onsubmit="return my_fun(this)">
+    Digite 5 caracteres: <input name="num1" type="text" size="20,1"><br>
+    <input type="submit">
+</form>
+</body>
+</html>

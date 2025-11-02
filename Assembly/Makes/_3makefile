@@ -1,0 +1,11 @@
+all:	mensagem1	
+	@echo "Oi, mundo!"
+	
+mensagem1:
+	@echo "Oi, sou a mensagem1!"
+	
+mensagem2:
+	@echo "Oi, sou a mensagem2!"
+
+criarpasta:
+	mkdir subpasta

@@ -1,0 +1,12 @@
+SRC = ./src
+BIN = ./bin
+
+
+hello1:	hello1.o
+	ld -s -m elf_i386 hello1.o -o $(BIN)/hello1
+	rm *.o
+
+hello1.o:	$(SRC)/hello1.asm
+	nasm -f elf32 $(SRC)/hello1.asm -o hello1.o
+
+	

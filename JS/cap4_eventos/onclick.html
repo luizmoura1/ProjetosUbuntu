@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+    <!--
+    function my_fun(){
+        window.alert("Um evento onClick foi ativado!");
+    }
+    //-->
+</script>
+</head>
+<body onload='welcome()' onunload="goodbye()">
+<h3>Cap 4 - Evento OnClick</h3>
+<hr>
+<a href="javascript:active()">Standard Link</a>
+<br><br>
+<form method="POST" enctype="application/x-www-form-urlencoded">
+    <input name="radio1" type="radio" onclick="my_fun()">Radio Button<br><br>
+    <input name="checkbox1" type="checkbox" onclick="my_fun()">CheckBox<br><br>
+    <input name="button1" type="button" onclick="my_fun()" value="Standard Button"><br><br>
+    <input type="reset" onclick="my_fun()"><br><br>
+    <input type="submit" onclick="my_fun()"><br>
+</form>
+</body>
+</html>

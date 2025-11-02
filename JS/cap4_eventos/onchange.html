@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+    <!--
+    function my_fun(){
+        window.alert("Avaliando os dados.");
+        document.names.total.value = (document.names.name1.value + " " + document.names.name2.value + " " + document.names.name3.value);   
+    }
+    //-->
+</script>
+</head>
+<body>
+<h3>Cap 4 - Evento OnChange</h3>
+<hr>
+<a href="javascript:active()">Standard Link</a>
+<br><br>
+<form name="names" method="POST" enctype="application/x-www-form-urlencoded">
+    Primeiro Nome: <input name="name1" type="text" size="10,1" onchange="my_fun()"><br>
+    Segundo Nome: <input name="name2" type="text" size="10,1" onchange="my_fun()"><br>
+    Sobrenome: <input name="name3" type="text" size="10,1" onchange="my_fun()"><br>
+    Nome Completo: <input name="total" type="text" size="35,1">
+</form>
+</body>
+</html>
