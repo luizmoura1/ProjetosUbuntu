@@ -1,0 +1,38 @@
+// created: 11/11/2025
+// Programa: Manipulação de texto
+// Ambiente: Web (https://designliquido.github.io/delegua-web/)
+
+// DADOS
+const SAUDACAO = "Oi, "
+var nome
+
+// COMANDOS
+escreva("========== V A R I A V E I S ==========")
+escreva("1 - Literal classico helloworld:")
+escreva("Oi, mundo!")
+
+escreva("2 - Valor std antes da inicializacao:")
+escreva("nome = " + nome)
+escreva(SAUDACAO + nome)
+
+nome = "Ana"
+escreva("3 - Inicialização (1a atribuição):")
+escreva("nome = " + nome)
+escreva(SAUDACAO + nome)
+
+nome = "Beatriz"
+escreva("4 - Nova atribuição:")
+escreva("nome = " + nome)
+escreva(SAUDACAO + nome)
+
+escreva("5 - Atribuição interativa:")
+nome = leia("Informe um nome: ")
+escreva("nome = " + nome)
+escreva(SAUDACAO + nome)
+
+escreva("========== R E S U M O ==========")
+escreva("Constante: SAUDACAO = '" + SAUDACAO + "'")
+escreva("Variável: nome = '" + nome + "'")
+
+escreva("A constante tem " + SAUDACAO.tamanho() + " caracteres: '" + SAUDACAO + "'")
+escreva("4o caractere da variável nome: '" + nome.fatiar(3,4) + "'")
