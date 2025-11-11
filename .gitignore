@@ -1,18 +1,58 @@
-# Ignorar arquivos de IDE
+##################################
+# IGNORAR CONFIGURAÇÕES DE IDE
+##################################
 .vscode/
 .idea/
+*.code-workspace
 
-# Arquivos temporários do sistema
+##################################
+# ARQUIVOS TEMPORÁRIOS DO SISTEMA
+##################################
 *.swp
 *~
 *.tmp
 *.log
 *.bak
 
-# Build ou binários
+##################################
+# COMPILAÇÃO / BINÁRIOS (LINGUAGEM C)
+##################################
+*.o
+*.out
+*.exe
+
+# Pastas de build comuns
 bin/
 obj/
 
-# Só rastrear scripts
-# !*.sh
-# !*.bas
+##################################
+# PYTHON
+##################################
+__pycache__/
+*.pyc
+*.pyo
+
+##################################
+# NODE / JAVASCRIPT
+##################################
+node_modules/
+npm-debug.log
+yarn-error.log
+
+##################################
+# DELEGUA
+##################################
+# (Delegua normalmente não gera build,
+# mas em caso de testes gerando arquivos, incluiria aqui)
+
+##################################
+# SOMENTE RASTREAR CÓDIGO-FONTE
+##################################
+!*.c
+!*.h
+!*.py
+!*.js
+!*.delegua
+!*.sh
+!*.bas
+
