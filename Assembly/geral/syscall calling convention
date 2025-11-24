@@ -1,0 +1,21 @@
+arch	syscall NR	return	arg0	arg1	arg2	arg3	arg4	arg5
+x86	eax		eax	ebx	ecx	edx	esi	edi	ebp
+x86_64	rax		rax	rdi	rsi	rdx	r10	r8	r9
+
+
+
+
+ax	-> return	-> accumulator		-> funções: read, write; ou exit
+bx	-> arg0		-> base			-> file descriptors: std_in, std_out; ou ret_exit	-> preservado, cuidado!	
+
+cx	-> arg1		-> counter		-> livre
+dx	-> arg2		-> data			-> livre
+
+si	-> arg3		-> source index		-> quantidade de argumentos
+di	-> arg4		-> destination index	-> argumentos
+
+bp	-> arg5		-> base pointer		-> preservado, cuidado?
+sp	->		-> stack pointer	-> ponteiro da pilha
+
+
+

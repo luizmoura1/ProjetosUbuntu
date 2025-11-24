@@ -1,5 +1,8 @@
 ; =========================================================
 ; library32.inc — Biblioteca simples com constantes
+; Convenções desta biblioteca:
+; - Todos os valores com equ estão em decimal
+; - Caracteres especiais podem ser usados em db, dw, dd, dq, dt como hexadecimais
 ; =========================================================
 
 ; -----------------------------
@@ -21,9 +24,9 @@ SYS_EXIT    equ 1      ; finalizar o processo
 ; -----------------------------
 ; Descritores padrão
 ; -----------------------------
-STD_IN      equ 0      ; entrada padrão
-STD_OUT     equ 1      ; saída padrão
-STD_ERR     equ 2      ; saída de erro
+STDIN      equ 0      ; entrada padrão
+STDOUT     equ 1      ; saída padrão
+STDERR     equ 2      ; saída de erro
 
 ; -----------------------------
 ; Códigos de retorno ao SO
@@ -34,5 +37,5 @@ RET_NOT_OK	equ 1	; retorno indicando erro genérico
 ; -----------------------------
 ; Interrupção usada para syscalls
 ; -----------------------------
-SYSCALL    equ 128    ; vetor de interrupção (0x80) — para uso em "int SYSCALL"
+_SYSCALL    equ 128    ; vetor de interrupção (0x80) — para uso em "int SYSCALL"
 

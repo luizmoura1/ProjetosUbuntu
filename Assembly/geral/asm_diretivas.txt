@@ -1,0 +1,58 @@
+; nasm	-f	elf|32|		elf64	prog_fnt.asm			; montagem
+; ld	|-s|	-m elf_i386		prog_obj.o	-o prog_exe	; linkedição
+; ./prog_exe
+
+; [label]	opcode	[operand,]		[;comment]
+
+
+
+Diretivas: d_
+
+usado em section .data (para constantes e para variáveis inicializadas)
+
+define, isto é, declara e inicializa (ou atribui pela primeira vez)
+
+aloca número de bytes em link-time, no arquivo executável
+
+Diretivas: res_
+
+usado em section .bss (para variáveis não inicializadas)
+
+dimensiona, declara mas não inicializa, não atribui
+
+aloca número de bytes em load-time, no carregamento do arquivo executável na memória RAM
+
+Alocação de tipos pelo sufixo _ :
+
+b = byte (1)
+
+w = word (2)
+
+d = dword (4)
+
+q = qword (8)
+
+t = tword (10)
+
+
+
+Delimitadores para conteúdo, valor ou literal de texto (NASM)
+Aspas duplas "…"
+
+e
+
+Aspas simples '…'
+
+Nenhuma forma interpreta sequências de escape padrão do NASM, como:
+
+\n → 0x0A (LF)
+
+\t → 0x09 (TAB)
+
+\r → 0x0D (CR)
+
+\" → 0x22 (")
+
+\\ → 0x5C (\)
+
+Mas então quando se usa tais sequência de escape no NASM?

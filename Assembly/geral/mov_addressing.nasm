@@ -10,3 +10,17 @@ Mas pode ser feita das seguintes formas combinadas:
 | mov	| 	| register	| (type)| memory |
 | mov	| (type)| memory	| 	| register |
 
+
+instrução MOV: destination <- source
+
+register	<- immediate
+
+(type) memory	<- immediate
+
+
+register	<- register
+
+register	<- (type) memory
+(type) memory	<- register
+
+
